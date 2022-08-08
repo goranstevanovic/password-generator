@@ -11,10 +11,9 @@ const characters = [
   '/',
 ];
 
-const passwordQuantity = 2;
-
 const passwordForm = document.getElementById('password-form');
 const passwordLengthInput = document.getElementById('password-length');
+const passwordQuantityInput = document.getElementById('password-quantity');
 const passwordsEl = document.getElementById('passwords');
 
 function getRandomCharacter(array) {
@@ -58,6 +57,7 @@ function handleSubmit(e) {
   e.preventDefault();
 
   const passwordLength = passwordLengthInput.value;
+  const passwordQuantity = passwordQuantityInput.value;
 
   const passwords = generatePasswords(passwordLength, passwordQuantity);
 

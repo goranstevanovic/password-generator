@@ -41,12 +41,17 @@ body {
   font-weight: 800;
 }
 
+.form__label {
+  display: block;
+}
+
 .form__input {
   background: var(--dark);
   border-bottom: 1px solid var(--accent);
   border: none;
   color: var(--accent);
-  margin-bottom: 1em;
+  display: block;
+  margin: 0.5em 0 1em;
   padding: 0.5em;
   width: 3.25em;
 }
