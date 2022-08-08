@@ -22,6 +22,18 @@
         <span class="header__title--highlight">random passwords</span>
       </h1>
       <form id="password-form" class="form">
+        <label class="form__label" for="password-length">
+          How many characters?
+        </label>
+        <input
+          type="number"
+          id="password-length"
+          class="form__input"
+          value="16"
+          min="8"
+          max="32"
+        />
+
         <button id="generate-passwords" class="form__button">
           Generate password(s)
         </button>
