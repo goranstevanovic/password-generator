@@ -1,0 +1,73 @@
+:root {
+  --darker: #1f2937;
+  --dark: #273549;
+  --dark-hover: #354863;
+  --accent: #4adf86;
+  --accent-hover: #5ce292;
+}
+
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--darker);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+  border-bottom: 1px solid var(--dark);
+  padding: 2em;
+  margin: 0 auto 2em;
+  max-width: 30em;
+}
+
+.header__title {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.header__title--highlight {
+  font-weight: 800;
+  color: var(--accent);
+  display: block;
+  font-size: 1.75rem;
+}
+
+.form__button {
+  color: var(--darker);
+  background-color: var(--accent);
+  border: none;
+  font-weight: 700;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+}
+
+.form__button:hover {
+  background-color: var(--accent-hover);
+}
+
+.passwords {
+  padding: 2em;
+  max-width: 30em;
+  margin: 0 auto;
+}
+
+.passwords__password {
+  color: var(--accent-hover);
+  background-color: var(--dark);
+  padding: 0.5em;
+  text-align: center;
+  border-radius: 0.25em;
+}
+
+.passwords__password:hover {
+  background-color: var(--dark-hover);
+}
