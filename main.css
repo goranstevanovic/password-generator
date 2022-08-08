@@ -1,9 +1,9 @@
 :root {
-  --darker: #1f2937;
-  --dark: #273549;
-  --dark-hover: #354863;
-  --accent: #4adf86;
   --accent-hover: #5ce292;
+  --accent: #4adf86;
+  --dark-hover: #354863;
+  --dark: #273549;
+  --darker: #1f2937;
 }
 
 :root {
@@ -24,30 +24,30 @@ body {
 
 .header {
   border-bottom: 1px solid var(--dark);
-  padding: 2em;
   margin: 0 auto 2em;
   max-width: 30em;
+  padding: 2em;
 }
 
 .header__title {
-  font-weight: 400;
   font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .header__title--highlight {
-  font-weight: 800;
   color: var(--accent);
   display: block;
   font-size: 1.75rem;
+  font-weight: 800;
 }
 
 .form__button {
-  color: var(--darker);
   background-color: var(--accent);
+  border-radius: 0.25em;
   border: none;
+  color: var(--darker);
   font-weight: 700;
   padding: 0.5em 1em;
-  border-radius: 0.25em;
 }
 
 .form__button:hover {
@@ -55,17 +55,17 @@ body {
 }
 
 .passwords {
-  padding: 2em;
-  max-width: 30em;
   margin: 0 auto;
+  max-width: 30em;
+  padding: 2em;
 }
 
 .passwords__password {
-  color: var(--accent-hover);
   background-color: var(--dark);
+  border-radius: 0.25em;
+  color: var(--accent-hover);
   padding: 0.5em;
   text-align: center;
-  border-radius: 0.25em;
 }
 
 .passwords__password:hover {
