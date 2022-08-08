@@ -41,6 +41,16 @@ body {
   font-weight: 800;
 }
 
+.form__input {
+  background: var(--dark);
+  border-bottom: 1px solid var(--accent);
+  border: none;
+  color: var(--accent);
+  margin-bottom: 1em;
+  padding: 0.5em;
+  width: 3.25em;
+}
+
 .form__button {
   background-color: var(--accent);
   border-radius: 0.25em;
@@ -66,6 +76,7 @@ body {
   color: var(--accent-hover);
   padding: 0.5em;
   text-align: center;
+  word-wrap: break-word;
 }
 
 .passwords__password:hover {

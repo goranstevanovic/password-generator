@@ -12,9 +12,9 @@ const characters = [
 ];
 
 const passwordQuantity = 2;
-const passwordLength = 16;
 
 const passwordForm = document.getElementById('password-form');
+const passwordLengthInput = document.getElementById('password-length');
 const passwordsEl = document.getElementById('passwords');
 
 function getRandomCharacter(array) {
@@ -30,7 +30,7 @@ function generatePassword(passwordLength) {
   return password;
 }
 
-function generatePasswords(quantity) {
+function generatePasswords(passwordLength, passwordQuantity) {
   const passwords = [];
 
   for (let i = 0; i < passwordQuantity; i++) {
@@ -57,7 +57,9 @@ function displayPasswords(passwords) {
 function handleSubmit(e) {
   e.preventDefault();
 
-  const passwords = generatePasswords(passwordQuantity);
+  const passwordLength = passwordLengthInput.value;
+
+  const passwords = generatePasswords(passwordLength, passwordQuantity);
 
   displayPasswords(passwords);
 }
