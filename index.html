@@ -46,6 +46,49 @@
           max="12"
         />
 
+        <fieldset class="form__fieldset">
+          <legend>What type of characters?</legend>
+          <input
+            type="checkbox"
+            id="characters-lowercase"
+            name="character-types"
+            value="lowercase"
+            checked
+          />
+          <label class="form__label" for="characters-lowercase"
+            >Lowercase</label
+          >
+
+          <input
+            type="checkbox"
+            id="characters-uppercase"
+            name="character-types"
+            value="uppercase"
+            checked
+          />
+          <label class="form__label" for="characters-uppercase"
+            >Uppercase</label
+          >
+
+          <input
+            type="checkbox"
+            id="characters-numbers"
+            name="character-types"
+            value="numbers"
+            checked
+          />
+          <label class="form__label" for="characters-numbers">Numbers</label>
+
+          <input
+            type="checkbox"
+            id="characters-symbols"
+            name="character-types"
+            value="symbols"
+            checked
+          />
+          <label class="form__label" for="characters-symbols">Symbols</label>
+        </fieldset>
+
         <button id="generate-passwords" class="form__button">
           Generate password(s)
         </button>
