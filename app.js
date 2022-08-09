@@ -38,7 +38,7 @@ function generatePassword(passwordLength, passwordCharacterTypes) {
   }
 
   if (characters.length < 1) {
-    return `<span class="warning">Please choose at least one character type!</span>`;
+    return;
   }
 
   let password = '';
@@ -64,6 +64,16 @@ function generatePasswords(
 
 function displayPasswords(passwords) {
   let output = '';
+
+  if (passwords.includes(undefined)) {
+    output += `
+      <p class="passwords__password passwords__password--warning">
+        Please select at least one of the character types.
+      </p>
+    `;
+    passwordsEl.innerHTML = output;
+    return;
+  }
 
   for (const password of passwords) {
     output += `

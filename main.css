@@ -4,7 +4,7 @@
   --dark-hover: #354863;
   --dark: #273549;
   --darker: #1f2937;
-  --danger-bg: #fb7185;
+  --danger-bg: #881337;
 }
 
 :root {
@@ -96,6 +96,7 @@ body {
   background-color: var(--dark-hover);
 }
 
-.warning {
-  color: var(--danger-bg);
+.passwords__password--warning {
+  background-color: var(--danger-bg);
+  color: #fff;
 }
