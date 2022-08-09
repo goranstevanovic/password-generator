@@ -4,6 +4,7 @@
   --dark-hover: #354863;
   --dark: #273549;
   --darker: #1f2937;
+  --danger-bg: #881337;
 }
 
 :root {
@@ -39,6 +40,13 @@ body {
   display: block;
   font-size: 1.75rem;
   font-weight: 800;
+}
+
+.form__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1em;
 }
 
 .form__label {
@@ -86,4 +94,9 @@ body {
 
 .passwords__password:hover {
   background-color: var(--dark-hover);
+}
+
+.passwords__password--warning {
+  background-color: var(--danger-bg);
+  color: #fff;
 }
