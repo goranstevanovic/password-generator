@@ -5,6 +5,12 @@
   --dark-hover: #354863;
   --dark: #273549;
   --darker: #1f2937;
+
+  /* Password strength meter colors */
+  --meter-bad: #e3004a;
+  --meter-good: #bfca36;
+  --meter-strong: #77933c;
+  --meter-weak: #f5770f;
 }
 
 :root {
@@ -110,4 +116,53 @@ body {
   padding: 0.5rem 1em;
   position: fixed;
   transform: translateX(-50%);
+}
+
+/* Password meter bar */
+.password__meter {
+  background-color: var(--dark);
+  border-radius: 0.25em;
+  height: 1em;
+  width: 80%;
+}
+
+.password__meter::-webkit-meter-bar {
+  background: none;
+  height: 1em;
+}
+
+/* Password meter value */
+
+/* Webkit based browsers */
+.password__meter::-webkit-meter-optimum-value {
+  height: 100%;
+}
+.password__meter[value='1']::-webkit-meter-optimum-value {
+  background: var(--meter-bad);
+}
+.password__meter[value='2']::-webkit-meter-optimum-value {
+  background: var(--meter-weak);
+}
+.password__meter[value='3']::-webkit-meter-optimum-value {
+  background: var(--meter-good);
+}
+.password__meter[value='4']::-webkit-meter-optimum-value {
+  background: var(--meter-strong);
+}
+
+/* Gecko based browsers */
+.password__meter::-moz-meter-bar {
+  border-radius: 0.25em;
+}
+.password__meter[value='1']::-moz-meter-bar {
+  background: var(--meter-bad);
+}
+.password__meter[value='2']::-moz-meter-bar {
+  background: var(--meter-weak);
+}
+.password__meter[value='3']::-moz-meter-bar {
+  background: var(--meter-good);
+}
+.password__meter[value='4']::-moz-meter-bar {
+  background: var(--meter-strong);
 }
