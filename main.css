@@ -1,10 +1,10 @@
 :root {
   --accent-hover: #5ce292;
   --accent: #4adf86;
+  --danger-bg: #881337;
   --dark-hover: #354863;
   --dark: #273549;
   --darker: #1f2937;
-  --danger-bg: #881337;
 }
 
 :root {
@@ -44,9 +44,9 @@ body {
 
 .form__fieldset {
   border: none;
-  padding: 0;
-  margin: 0;
   margin-bottom: 1em;
+  margin: 0;
+  padding: 0;
 }
 
 .form__label {
