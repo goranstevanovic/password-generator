@@ -109,4 +109,23 @@ function handleSubmit(e) {
   displayPasswords(passwords);
 }
 
+function handleClick(e) {
+  if (!e.target.classList.contains('passwords__password')) {
+    return;
+  }
+
+  const text = e.target.textContent.trim();
+
+  navigator.clipboard
+    .writeText(text)
+    .then(function () {
+      console.log('Password copied to clipboard:', text);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+
 passwordForm.addEventListener('submit', handleSubmit);
+
+passwordsEl.addEventListener('click', handleClick);
