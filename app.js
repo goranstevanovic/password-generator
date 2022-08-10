@@ -20,6 +20,14 @@ const passwordCharacters = {
   ],
 }
 
+const passwordStrengthLabels = {
+  0: 'Worst',
+  1: 'Bad',
+  2: 'Weak',
+  3: 'Good',
+  4: 'Strong',
+};
+
 const passwordForm = document.getElementById('password-form');
 const passwordLengthInput = document.getElementById('password-length');
 const passwordQuantityInput = document.getElementById('password-quantity');
@@ -28,6 +36,12 @@ const passwordsEl = document.getElementById('passwords');
 function getRandomCharacter(array) {
   const randomIndex = Math.floor(Math.random() * array.length);
   return array[randomIndex];
+}
+
+function calculatePasswordStrength(password) {
+  const result = zxcvbn(password);
+  console.log(result.score);
+  return result.score;
 }
 
 function generatePassword(passwordLength, passwordCharacterTypes) {
@@ -45,7 +59,12 @@ function generatePassword(passwordLength, passwordCharacterTypes) {
   for (let i = 0; i < passwordLength; i++) {
     password += getRandomCharacter(characters);
   }
-  return password;
+
+  const passwordStrength = calculatePasswordStrength(password);
+  return {
+    password,
+    passwordStrength,
+  };
 }
 
 function generatePasswords(
@@ -59,6 +78,7 @@ function generatePasswords(
     passwords.push(generatePassword(passwordLength, passwordCharacterTypes));
   }
 
+  console.log(passwords);
   return passwords;
 }
 
@@ -75,10 +95,14 @@ function displayPasswords(passwords) {
     return;
   }
 
-  for (const password of passwords) {
+  for (const { password, passwordStrength } of passwords) {
     output += `
       <p class="passwords__password">
         ${password}
+      </p>
+      <p>
+        <meter class="password__meter" min="0" max="4" value="${passwordStrength}"></meter>
+        ${passwordStrengthLabels[passwordStrength]}
       </p>
     `;
   }
