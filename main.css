@@ -100,3 +100,14 @@ body {
   background-color: var(--danger-bg);
   color: #fff;
 }
+
+.toast-message {
+  background-color: var(--accent);
+  bottom: 0.5em;
+  color: var(--darker);
+  font-size: 0.8rem;
+  left: 50%;
+  padding: 0.5rem 1em;
+  position: fixed;
+  transform: translateX(-50%);
+}

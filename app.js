@@ -86,6 +86,26 @@ function displayPasswords(passwords) {
   passwordsEl.innerHTML = output;
 }
 
+function displayToastMessage(text) {
+  let toastEl = null;
+
+  if (document.getElementById('toast-message')) {
+    toastEl = document.getElementById('toast-message');
+    toastEl.remove();
+  }
+
+  toastEl = document.createElement('p');
+  toastEl.id = 'toast-message';
+  toastEl.classList.add('toast-message');
+  toastEl.textContent = text;
+
+  document.body.appendChild(toastEl);
+
+  setTimeout(function () {
+    toastEl.remove();
+  }, 3000);
+}
+
 function handleSubmit(e) {
   e.preventDefault();
 
@@ -109,4 +129,23 @@ function handleSubmit(e) {
   displayPasswords(passwords);
 }
 
+function handleClick(e) {
+  if (!e.target.classList.contains('passwords__password')) {
+    return;
+  }
+
+  const text = e.target.textContent.trim();
+
+  navigator.clipboard
+    .writeText(text)
+    .then(function () {
+      displayToastMessage('Password copied to clipboard');
+    })
+    .catch(function (error) {
+      displayToastMessage('There was an error when copying to clipboard');
+    });
+}
+
 passwordForm.addEventListener('submit', handleSubmit);
+
+passwordsEl.addEventListener('click', handleClick);
