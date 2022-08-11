@@ -108,6 +108,10 @@ body {
   padding: 2.5em 2em 2em;
 }
 
+.passwords__password-wrapper {
+  margin-bottom: 2em;
+}
+
 .passwords__password {
   background-color: var(--dark);
   border-radius: 0.25em;
