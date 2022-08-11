@@ -40,7 +40,6 @@ function getRandomCharacter(array) {
 
 function calculatePasswordStrength(password) {
   const result = zxcvbn(password);
-  console.log(result.score);
   return result.score;
 }
 
@@ -78,7 +77,6 @@ function generatePasswords(
     passwords.push(generatePassword(passwordLength, passwordCharacterTypes));
   }
 
-  console.log(passwords);
   return passwords;
 }
 
