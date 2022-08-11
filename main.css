@@ -109,6 +109,9 @@ body {
 }
 
 .passwords__password-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 2em;
 }
 
@@ -119,6 +122,7 @@ body {
   margin-top: 0;
   padding: 0.5em;
   text-align: center;
+  width: 100%;
   word-wrap: break-word;
 }
 

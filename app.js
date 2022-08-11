@@ -99,10 +99,8 @@ function displayPasswords(passwords) {
         <p class="passwords__password">
           ${password}
         </p>
-        <p>
-          <meter class="password__meter" min="0" max="4" value="${passwordStrength}"></meter>
-          ${passwordStrengthLabels[passwordStrength]}
-        </p>
+        <meter class="password__meter" min="0" max="4" value="${passwordStrength}"></meter>
+        <span>${passwordStrengthLabels[passwordStrength]}</span>
       </div>
     `;
   }
