@@ -185,3 +185,21 @@ body {
 .password__meter[value='4']::-moz-meter-bar {
   background: var(--meter-strong);
 }
+
+@media screen and (min-width: 30em) {
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__control {
+    width: 50%;
+  }
+
+  .form__fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.5em;
+    width: 100%;
+  }
+}
