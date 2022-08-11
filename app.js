@@ -95,13 +95,13 @@ function displayPasswords(passwords) {
 
   for (const { password, passwordStrength } of passwords) {
     output += `
-      <p class="passwords__password">
-        ${password}
-      </p>
-      <p>
+      <div class="passwords__password-wrapper">
+        <p class="passwords__password">
+          ${password}
+        </p>
         <meter class="password__meter" min="0" max="4" value="${passwordStrength}"></meter>
-        ${passwordStrengthLabels[passwordStrength]}
-      </p>
+        <span>${passwordStrengthLabels[passwordStrength]}</span>
+      </div>
     `;
   }
 
