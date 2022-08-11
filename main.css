@@ -31,9 +31,9 @@ body {
 
 .header {
   border-bottom: 1px solid var(--dark);
-  margin: 0 auto 2em;
+  margin: 0 auto;
   max-width: 30em;
-  padding: 2em;
+  padding: 2em 2em 2.5em;
 }
 
 .header__title {
@@ -105,13 +105,14 @@ body {
 .passwords {
   margin: 0 auto;
   max-width: 30em;
-  padding: 2em;
+  padding: 2.5em 2em 2em;
 }
 
 .passwords__password {
   background-color: var(--dark);
   border-radius: 0.25em;
   color: var(--accent-hover);
+  margin-top: 0;
   padding: 0.5em;
   text-align: center;
   word-wrap: break-word;
